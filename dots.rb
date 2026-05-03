@@ -5,21 +5,21 @@
 class Dots < Formula
   desc "Interactive frontend for the Nix-managed dotfiles environment."
   homepage "https://github.com/sanurb/.dotfiles"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.1.0/dots_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6ed85be27e2bbed6546813d71341f845efbdce2c1309a11b4652f9a39cba430f"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.2.0/dots_0.2.0_darwin_amd64.tar.gz"
+      sha256 "d7a272767cd56fcbfe372b831bd4c38cba3473107b41b4d810684fdcb17f0d72"
 
       define_method(:install) do
         bin.install "dots"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.1.0/dots_0.1.0_darwin_arm64.tar.gz"
-      sha256 "1f523dd67c2c96115a292123e18fb928c45c4c6832683c2a5b188da8d9123955"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.2.0/dots_0.2.0_darwin_arm64.tar.gz"
+      sha256 "bede9d403495f3ee3718f0b7e3a0e950f0f4704af7ce0218f4ff34156759e740"
 
       define_method(:install) do
         bin.install "dots"
@@ -29,15 +29,15 @@ class Dots < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.1.0/dots_0.1.0_linux_amd64.tar.gz"
-      sha256 "625eaeec0fbd904aa6c249be59ec0f4a96ee5b4cc39224fa0470ade9befac6c5"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.2.0/dots_0.2.0_linux_amd64.tar.gz"
+      sha256 "e24dc0ce2149915329eca52c0fecd2e60fdc14a29f74acbfb66bcdf044bfd49a"
       define_method(:install) do
         bin.install "dots"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.1.0/dots_0.1.0_linux_arm64.tar.gz"
-      sha256 "dcd3d3134fd5dddee045e505a880e1ed0bdcc38b3df0c8365c0d23f3e3f2978b"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.2.0/dots_0.2.0_linux_arm64.tar.gz"
+      sha256 "e3d323aff5ba62d3a85c0e96d7ef26802e8684957b8e328b21d9017a00670d01"
       define_method(:install) do
         bin.install "dots"
       end
