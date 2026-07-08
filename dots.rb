@@ -5,21 +5,21 @@
 class Dots < Formula
   desc "Interactive frontend for the Nix-managed dotfiles environment."
   homepage "https://github.com/sanurb/.dotfiles"
-  version "0.13.0"
+  version "0.13.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.0/dots_0.13.0_darwin_amd64.tar.gz"
-      sha256 "4340ce5520f27285e711b6d912457f00772b2ea1f6d4246a96fd8f9433547110"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.1/dots_0.13.1_darwin_amd64.tar.gz"
+      sha256 "410b359ea714648dc86e96457b280581724bf71f994f39f55df0e19897f69a39"
 
       define_method(:install) do
         bin.install "dots"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.0/dots_0.13.0_darwin_arm64.tar.gz"
-      sha256 "0942e44f0d2006ad780b19003da6661344a9ce367f459242de9c91b579600c3f"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.1/dots_0.13.1_darwin_arm64.tar.gz"
+      sha256 "8e75755860a00e7bb1abf2b368004f305e90a7b99a0007dae36490de8a8daa1a"
 
       define_method(:install) do
         bin.install "dots"
@@ -29,15 +29,15 @@ class Dots < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.0/dots_0.13.0_linux_amd64.tar.gz"
-      sha256 "5dea131c0f496dabefe1c35ce83a2ec30497d1532588038f9df6f29d4a7e7081"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.1/dots_0.13.1_linux_amd64.tar.gz"
+      sha256 "2331c3933dcb55ddb1a5ad986734f8a2380d4266786a97562e0dac288fa81cea"
       define_method(:install) do
         bin.install "dots"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.0/dots_0.13.0_linux_arm64.tar.gz"
-      sha256 "9ac95ecca87cb1d42c977927690a967d409fa12ff501d8f2178969f790f3fbae"
+      url "https://github.com/sanurb/.dotfiles/releases/download/v0.13.1/dots_0.13.1_linux_arm64.tar.gz"
+      sha256 "665dc4506ddebbf32b3d653ddba5c2fe72f4b3bfb777fcadddecbbf116eeb476"
       define_method(:install) do
         bin.install "dots"
       end
